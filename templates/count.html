@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>countpage</title>
+  </head>
+  <body>
+    <h2>your text:</h2>
+
+    {{ fulltext }}
+<br>
+
+<a href="{% url 'home'%}">count new text!</a>
+
+    <h2>there are {{count}} words in your text!</h2>
+
+    <h2>words count</h2>
+
+    {% for word , totalcount in sortedworddict %}
+
+    {{word}}:{{totalcount}}
+    <br>
+    {% endfor %}
+
+  </body>
+</html>
